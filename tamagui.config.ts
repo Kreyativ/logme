@@ -25,6 +25,8 @@ const animations = createAnimations({
   },
 });
 
+export const primaryColor = '#39D264';
+
 const headingFont = createInterFont();
 
 const bodyFont = createInterFont();
@@ -46,20 +48,19 @@ export const Title = styled(H1, {
 });
 
 export const Subtitle = styled(SizableText, {
-  color: '#38434D',
+  color: '#000000',
   size: '$9',
 });
 
 export const Button = styled(YStack, {
   alignItems: 'center',
-  backgroundColor: '#6366F1',
+  backgroundColor: '#39D264',
   borderRadius: 28,
   hoverStyle: {
     backgroundColor: '#5a5fcf',
   },
   justifyContent: 'center',
   maxWidth: 500,
-  padding: 16,
   shadowColor: '#000',
   shadowOffset: {
     height: 2,
@@ -79,7 +80,7 @@ export const ButtonText = styled(SizableText, {
 const config = createTamagui({
   light: {
     color: {
-      background: 'gray',
+      background: '#fff',
       text: 'black',
     },
   },
