@@ -1,9 +1,10 @@
-import { Container, Subtitle } from '../../../tamagui.config';
+import Settings from '../../../components/settings/Settings';
+import { Container } from '../../../tamagui.config';
 
 const Page = () => {
   return (
-    <Container>
-      <Subtitle>Settings</Subtitle>
+    <Container backgroundColor="#fff">
+      <Settings />
     </Container>
   );
 };
