@@ -1,8 +1,10 @@
 import type { TabsContentProps } from 'tamagui';
-import { SizableText, Tabs, H5 } from 'tamagui';
+import { SizableText, Tabs } from 'tamagui';
 
 import TaskCategories from './Tasks/TaskCategories';
 import TaskList from './Tasks/TaskList';
+import AllCharts from './health/AllCharts';
+import Menu from './health/Menu';
 
 const HomeTabs = () => {
   return (
@@ -32,7 +34,8 @@ const HomeTabs = () => {
       </TabsContent>
 
       <TabsContent value="tab2" theme="light">
-        <H5>Health</H5>
+        <AllCharts />
+        <Menu />
       </TabsContent>
     </Tabs>
   );
