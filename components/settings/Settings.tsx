@@ -6,21 +6,26 @@ import { Subtitle } from '../../tamagui.config';
 const generalSettings = [
   {
     title: 'Account',
+    href: '/settings/account-page',
   },
   {
     title: 'Week Start',
+    href: '/settings/week-start',
     value: 'Sunday',
   },
   {
     title: 'Language',
+    href: '/settings/language',
     value: 'English',
   },
   {
     title: 'Notifications',
+    href: '/settings/notifications',
     toggle: true,
   },
   {
     title: 'Dark Mode',
+    href: '/settings/dark-mode',
     toggle: true,
   },
 ];
@@ -28,9 +33,11 @@ const generalSettings = [
 const supportSettings = [
   {
     title: 'Get Help',
+    href: '/settings/get-help',
   },
   {
     title: 'Restore Purchases',
+    href: '/settings/restore-purchases',
   },
 ];
 

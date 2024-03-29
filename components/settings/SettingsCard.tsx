@@ -1,14 +1,18 @@
 import { Entypo, FontAwesome } from '@expo/vector-icons';
+import { useRouter } from 'expo-router';
+import { Pressable } from 'react-native';
 import { SizableText, View, XStack } from 'tamagui';
 
 type SettingsCardProps = {
   title: string;
+  href: string;
   value?: string;
   toggle?: boolean;
 };
 
 const SettingsCard = (props: SettingsCardProps) => {
-  const { title, value, toggle } = props;
+  const { title, href, value, toggle } = props;
+  const router = useRouter();
 
   return (
     <XStack
@@ -30,13 +34,15 @@ const SettingsCard = (props: SettingsCardProps) => {
           </SizableText>
         )}
 
-        <View alignItems="center" justifyContent="center">
-          {toggle ? (
-            <FontAwesome name="toggle-on" size={36} color="#0099ff" />
-          ) : (
-            <Entypo name="chevron-right" size={30} color="#bbbbbb" />
-          )}
-        </View>
+        <Pressable onPress={() => router.navigate(href)}>
+          <View alignItems="center" justifyContent="center">
+            {toggle ? (
+              <FontAwesome name="toggle-on" size={36} color="#0099ff" />
+            ) : (
+              <Entypo name="chevron-right" size={30} color="#bbbbbb" />
+            )}
+          </View>
+        </Pressable>
       </XStack>
     </XStack>
   );
